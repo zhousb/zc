@@ -25,5 +25,9 @@ public class CustomerController {
 		
 		return "customers/query";
 	}
-	
+	@RequestMapping("test.do")
+	public String test(){
+		
+		return "customers/query";
+	}
 }
