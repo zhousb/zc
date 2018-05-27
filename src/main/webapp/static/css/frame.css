@@ -1,0 +1,52 @@
+/**导航**/
+.top{width: 100%; height:55px; background:#399afc;min-width:1190px;}
+.nav{width: 1190px;height:55px;margin: 0 auto;}
+.nav ul{width: 100%;float:left}
+.nav ul li{float:left;line-height:55px}
+.nav ul li p{float:left;}
+.nav ul .logo{font-size:24px;color:#fff}
+.nav ul .right{float:right}
+.nav ul .right p{margin-left:60px;}
+.nav ul .right p a{font-size:18px;color:#fff;}
+/**导航**/
+.header{width:100%;float:left;background:#fff;height:70px;}
+.header-blue{background:#2989e2;}
+.header-blue .logo{color:#fff}
+.header-blue .mainbav-list ul li a{color:#fff}
+.mainbav{width:1200px;margin:auto;}
+.logo{float:left;font-size:30px;font-weight:bold;line-height:70px;color:#333}
+.mainbav-list{float:right}
+.mainbav-list ul{float:left}
+.mainbav-list ul li{float:left;margin-left:32px;line-height:70px;}
+.mainbav-list ul li a{font-size:18px;color:#333;padding-left:5px; padding-right:5px;}
+.mainbav-list ul li .current{border-bottom:4px solid #ffc600;padding-bottom:22px;}
+.mainbav-list ul .loding-border{margin-left:50px;}
+.mainbav-list ul .loding-border a{width:60px;height:32px;float:left;line-height:32px;text-align:center;font-size:14px;margin-top:16px;border-radius:3px;}
+.mainbav-list ul .blue a{border:1px solid #2989e2;color:#2989e2}
+.mainbav-list ul .ash a{border:1px solid #c0c0c0;color:#333}
+.mainbav-list ul .white a{color:#fff}
+.mainbav-list ul .ml-10{float:left;margin-left:10px;}
+
+/**内容框架**/
+.ap-content{width:1200px;margin:0 auto;position: relative;}
+/**左侧菜单**/
+.rightcontent{width:1200px;float:left; background:url(../images/leftnav.jpg) repeat-y;padding-left:210px;min-height:200px;margin-top:20px;}
+/****/
+.leftnav{width:210px;float:left;position:absolute;left:0;top:80px;}
+.leftnav-title{width:100%;float:left;}
+.leftnav-title{}
+.leftnav-title ul li{float:left;font-size:18px;}
+.leftnav-title ul li i{ color:#d9d9d9;margin-right:10px;}
+.leftnav-title ul .right-icon{float:right;}
+.leftnav-title ul .right-icon i{color:#399afc}
+
+.leftnav-show{width: 100%;float:left;margin-top:10px;}
+.leftnav-show ul{width:100%;float:left;text-align: center;}
+.leftnav-show ul li{height:60px;line-height: 60px;}
+.leftnav-show ul li a{font-size:16px;color:#666;height:60px;}
+.leftnav-show ul li a:hover{width: 100%;float:left;height:60px;background: #fff;border-left:2px solid #399afc;color:#399afc}
+.leftnav-show ul li .current{width: 100%;float:left;height:60px;background: #fff;border-left:2px solid #399afc;color:#399afc}
+
+/**底部**/
+.footer-wrapper{width:100%;float:left;min-width:1200px;height:60px;}
+.footer-list{width:1200px;margin:0 auto;text-align: center;line-height:60px;font-size:14px;color:#666;}

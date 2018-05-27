@@ -1,0 +1,101 @@
+/**面包屑导航**/
+.breadcrumb{width:1190px;margin:0 auto;display:block;}
+.breadcrumb ul{width:100%;float:left;}
+.breadcrumb ul li p{float:left;}
+.breadcrumb ul .left{font-size:14px;color:#4f5151;float:left;margin-top: 8px;}
+
+
+
+/**首页右侧**/
+.rightcontent-ctn{width:990px;float:left;}
+.rightcontent-title{width:100%;height:64px; background:#fff;font-size:16px;line-height:64px;}
+.rightcontent-tplist{width:100%;float:left;background:#fff;padding:20px 0 0px 60px;}
+.tplist-title{width:100%;float:left;font-size:14px;padding-bottom:60px;}
+.tplist-none{width: 330px;height:400px;float:left;border:1px solid #d7d7d7;margin-left: 60px;margin-bottom: 20px;}
+.tplist-none-title{width: 100%;float:left;padding: 0 50px;margin-top:15px;}
+.tplist-none-title ul li{ text-align: center;margin-top:20px;font-size:14px;}
+.tplist-none-title ul .word{font-size:18px;}
+.tplist-none-tows{width: 100%;float:left;border-top:1px solid #d7d7d7}
+.tplist-none-icon{width: 100%;float:left;margin-top: 20px;}
+.tplist-none-icon ul li{float:left;margin-left:26px;}
+.tplist-none-icon ul li p{float:left;color:#666;}
+.tplist-none-icon ul li p i{color:#d6d6d6;margin-right: 4px;}
+.tplist-none-btn{width: 100%; text-align: center;float:left}
+/**API展示**/
+.api-zs{width: 100%;float:left;background:#fff;height:200px; padding:50px 0 0 30px;margin-bottom: 20px;position:relative;}
+.api-zs ul{width:100%;}
+.api-zs ul li{float:left;margin-right:25px; line-height:30px;color:#666}
+.api-zs ul .word{font-size:18px; color:#666;}
+.api-zs ul .ap-icon{margin-top:10px;}
+.api-zs ul li span{margin-right:4px;}
+.api-zs ul li span i{color:#d6d6d6}
+.tishi{position:absolute;right:50px;top:90px;font-size:16px;color:#3397ff}
+/**展示详情**/
+.zs-xq{width: 100%;float:left;background:#fff;height: auto;padding:10px 20px;min-height:600px;}
+.xq-title{width: 100%;font-size:18px;color:#333;float:left}
+.xq-title p{float:right;color:#2989e2}
+.form-label{width: 100%;float:left}
+.form-label ul{width: 100%;float:left}
+.form-label ul li{width:50%;float:left;line-height:30px;}
+.form-label ul li p{float:left;margin-right:6px;}
+.form-label ul li .word{width: 120px;text-align:right;}
+.form-label ul .x-lax{width: 100%;float:left;}
+.xq-table{width:100%;float:left;margin-top:40px;height:40px;border-bottom:1px solid #2989e2;}
+.xq-table ul{float:left;}
+.xq-table ul li{float:left;line-height:40px;margin-right:38px;}
+.xq-table ul li a{font-size:18px;color:#666;padding:0 20px;}
+.xq-table ul li .current{background:#2989e2;float:left;padding:0 20px;height:40px;color:#fff}
+.table-list{width: 100%;float:left}
+.xq-zs-list{width: 100%;float:left;background:#fbfbfb;border:1px solid #d7d7d7;height:200px;}
+.textarea-xlarge1{width:945px;height:200px;padding:0 10px; background:none;border: none;resize:none;color:#666;font-size:14px;line-height:25px;}
+.textarea-xlarge1:hover{border:none}
+
+/**卡号开通**/
+.mt-0{margin-top:0;}
+.form-card{width:100%;float:left;margin-top:30px;padding-left:30px;}
+.form-card ul{width:100%;float:left;margin-bottom:20px;}
+.form-card ul li{float:left;line-height:32px;margin-right:20px;}
+.form-card ul li p{float:left;margin-right:10px;position:relative;}
+.form-card ul li p span{float:left;}
+.form-card ul li p radio{width:14px;height:14px;}
+.form-card ul li p a{color:#2989e2;font-size:14px}
+.form-card ul li .word{width:80px;float:left;margin-right:10px;font-size:14px;}
+.form-card ul li .word .right{float:right}
+.form-card ul .btn a{width:88px;height:32px;background:#2989e2;float:left;color:#fff;font-size:14px;margin-left:90px;}
+.form-card ul .btn a:hover{background:#3693ed;}
+.form-card ul .car-file{width:88px;height:32px;position:absolute;left:0;top:0;filter:alpha(opacity=0);-moz-opacity:0;-khtml-opacity:0;opacity:0;}
+/**登录**/
+.login{width:100%;float:left;height:100%;min-width:1050px;}
+.login-baner{width:50%;height:100%;background:#2989e2;float:left;position:relative;min-width:511px;min-height:600px;}
+.login-baner p{position:absolute;left:50%;top:50%;margin-left:-255px;margin-top:-300px;}
+.login-user{width:50%;height:100%;float:left;background:#fff;min-width:380px;min-height:500px;position:relative;}
+.user-list{width:380px;float:left;position:absolute;left:50%;top:50%;margin-left:-190px;margin-top:-200px;}
+.user-list ul{width:100%;float:left}
+.user-list ul li{width:100%;float:left;line-height:40px;margin-bottom:20px;}
+.user-list ul .logo{text-align: center;margin-bottom:40px;}
+.user-list ul li p{float:left}
+.user-list ul li .word{width:60px;font-size:14px;}
+.user-list ul li .yzm{margin-left:10px;}
+.user-list ul .btn{margin-left:15px;margin-bottom:5px;}
+.user-list ul .forget-password{margin-left:65px;font-size:12px;}
+.user-list ul .forget-password a{color:#666;font-size:12px;}
+.user-list ul .forget-password .right{float:right;margin-right:80px;}
+.user-list ul .forget-password .right a{color:#2989e2}
+/**注册**/
+.register-bj{background-color:#f5f5f5;}
+.register{width:100%;height:100%;background:url(../images/register-bj.png) repeat-x bottom;}
+.register-list{width:600px;margin:0 auto;}
+.register-logo{width:100%;float:left;margin-top:40px;text-align:center;}
+.register-user{width:600px;height:510px;background:#fff;float:left;margin-top:30px;-webkit-box-shadow: #eee 0px 5px  6px ;-moz-box-shadow: #eee 0px 5px  6px ;box-shadow: #eee 0px 5px 6px;}
+.title-word{width:100%;text-align:center;font-size:24px;color:#2989e2;margin-top:40px;float:left;}
+.register-user ul{width:100%;float:left;padding-left:140px;}
+.register-user ul li{width:100%;float:left;margin-top:7px;}
+.register-user ul li p{float:left;}
+.register-user ul li .yazm a{width:120px;height:40px;float:left;border:1px solid #d7d7d7;background:#f7f7f7;text-align: center;line-height:40px;border-left:none;font-size:12px;color:#666;}
+.register-user ul li .yazm input{width:120px;height:40px;float:left;border:1px solid #d7d7d7;background:#f7f7f7;text-align: center;line-height:40px;border-left:none;font-size:12px;color:#666;}
+.register-user ul li .yazm button{width:120px;height:40px;float:left;border:1px solid #d7d7d7;background:#f7f7f7;text-align: center;line-height:40px;border-left:none;font-size:12px;color:#666;}
+.register-user ul .agreement a{font-size:12px;color:#2989e2}
+.register-user ul .agreement{font-size:12px;}
+.register-user ul .agreement .checkbox1{width:14px;height:14px;margin:2px 10px 0 0;float:left}
+.register-user ul .right{text-align:right;margin-top:5px;padding-right:140px;font-size:12px;}
+.register-user ul .right a{color:#2989e2}
