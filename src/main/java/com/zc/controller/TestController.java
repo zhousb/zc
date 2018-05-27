@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @RequestMapping("test")
 public class TestController {
 	
-	@RequestMapping("testController.do")
+	@RequestMapping("testCon.do")
 	public String test(){
 		return "test";
 	}
