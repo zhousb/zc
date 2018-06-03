@@ -1,10 +1,4 @@
-/*!
- * jQuery runner pagination plugin v1.0.0
- * based on jquery.pagController.js  jquery.twbsPagination.js
- * Copyright 2014, Asiainfo
- * Released under Apache 2.0 license
- * http://apache.org/licenses/LICENSE-2.0.html
- */
+
 ;
 (function ($, window, document, undefined) {
 

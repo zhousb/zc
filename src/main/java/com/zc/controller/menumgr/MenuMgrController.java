@@ -57,7 +57,7 @@ public class MenuMgrController {
 		custIn.setMenuName("客户资料录入");
 		custIn.setParentMenuId("1001");
 		custIn.setOrderNum(Long.valueOf(1));
-		custIn.setMenuUrl("/customers/add.do");
+		custIn.setMenuUrl("/customers/addIndex.do");
 		custIn.setIconClass("glyphicon glyphicon-check");
 		custIn.setEnable(true);
 		custIn.setDesc("");
@@ -67,7 +67,7 @@ public class MenuMgrController {
 		custQ.setMenuName("客户资料查询");
 		custQ.setParentMenuId("1001");
 		custQ.setOrderNum(Long.valueOf(1));
-		custQ.setMenuUrl("/customers/query.do");
+		custQ.setMenuUrl("/customers/queryIndex.do");
 		custQ.setIconClass("glyphicon glyphicon-eye-open");
 		custQ.setEnable(true);
 		custQ.setDesc("");

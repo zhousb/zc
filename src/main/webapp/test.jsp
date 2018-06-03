@@ -1,90 +1,116 @@
 <%@ page contentType="text/html;charset=UTF-8"%>
-  
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
-
+<c:set var="staticPath"
+	value="${pageContext.request.contextPath}/static" />
 <%
 	String path = request.getContextPath();
-	String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path;  
+	String basePath = request.getScheme() + "://"
+			+ request.getServerName() + ":" + request.getServerPort()
+			+ path + "/";
 	request.setAttribute("basePath", basePath);
-    request.setAttribute("staticPath", basePath+"/static");
+	request.setAttribute("staticPath", basePath + "static");
 %>
-<!DOCTYPE html>
 <html>
 <head>
-<title></title>
-	<meta charset="UTF-8"/>
-	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-
-	<title>认证审核</title>
-
-	<!-- 
-	<link rel="stylesheet" href="${staticPath}/css/font-awesome.css"/>
-	<link rel="stylesheet" href="${staticPath}/css/global.css"/>
-	<link rel="stylesheet" href="${staticPath}/css/frame.css"/>
-	<link rel="stylesheet" href="${staticPath}/css/modular.css"/>
-	<link rel="stylesheet" href="${staticPath}/css/index.css" rel="stylesheet" type="text/css">
-	<link rel="stylesheet" href="${staticPath}/css/iconfont.css" rel="stylesheet" type="text/css"> 
-	 -->
-	<link rel="stylesheet" href="${staticPath}/css/boostrap/style.css" type="text/css" />
-	<link rel="stylesheet" href="${staticPath}/css/boostrap/bootstrap.css" type="text/css" />
-	<link rel="stylesheet" href="${staticPath}/css/font-awesome/css/font-awesome.css" type="text/css" />
-	<link rel="stylesheet" href="${staticPath}/scripts/frame/ajaxhelper/css/jquery.pagcontroller.css"/>
-	<link rel="stylesheet" href="${staticPath}/scripts/frame/bootstrap/dist/css/fileinput.min.css"/>
-	<link rel="stylesheet" href="${staticPath}/scripts/frame/bootstrap-table/dist/bootstrap-table.css"/>
-	<link rel="stylesheet" href="${staticPath}/scripts/frame/bootstrapvalidator-0.4.5/dist/css/bootstrapValidator.min.css" type="text/css" />
-	<link rel="stylesheet" href="${staticPath}/scripts/frame/bootstrap-datetimepicker/css/bootstrap-datetimepicker.min.css"/>
-	<link rel="stylesheet" href="${staticPath}/scripts/ztree.3.5.26/css/zTreeStyle/zTreeStyle.css" type="text/css" />
-	<link rel="stylesheet" href="${staticPath}/css/boostrap/bootstrap-responsive.min.css" type="text/css" />
-	<link rel="stylesheet" href="${staticPath}/css/mno/admin.css" type="text/css" />
-	
-	<script src="${staticPath}/scripts/jquery-1.9.1.js"></script>
-	<script src="${staticPath}/scripts/frame/bootstrap/dist/js/bootstrap.min.js"></script>
-	<script src="${staticPath}/scripts/frame/jsrender/jsrender.min.js"></script>
-	<script src="${staticPath}/scripts/frame/jsviews/jsviews.min.js"></script>
-	<script src="${staticPath}/scripts/frame/bootbox/bootbox.js"></script>
-	<script src="${staticPath}/scripts/frame/json2/json2.js"></script>
-	<script src="${staticPath}/scripts/frame/form/jquery.form.min.js"></script>
-	<script src="${staticPath}/scripts/frame/ajaxhelper/jquery.pagcontroller.js"></script>
-	<script src="${staticPath}/scripts/frame/twbs-pagination/jquery.twbsPagination.min.js"></script>
-	<script src="${staticPath}/scripts/frame/runnerpagination/runner.pagination.js"></script>
-	<script src="${staticPath}/scripts/frame.js"></script>
-	<script src="${staticPath}/scripts/jquery.SuperSlide.2.1.1.js"></script>
-	
-	<%-- <script src="${staticPath}/scripts/frame/bootstrap/dist/js/fileinput.min.js"></script> --%>
-	<%-- <script src="${staticPath}/scripts/frame/bootstrap/dist/js/fileinput_locale_zh.js"></script> --%>
-	<script src="${staticPath}/scripts/frame/bootstrapvalidator-0.4.5/dist/js/bootstrapValidator.min.js"></script>
-	<script src="${staticPath}/scripts/jquery.bootstrap-pureClearButton.min.js"></script>
-	
-	<!-- 
-	
-	<script src="${staticPath}/scripts/frame/bootstrap-table/dist/bootstrap-table-export.js"></script>
-	<script src="${staticPath}/scripts/frame/bootstrap-table/dist/extends/tableExport/jquery.base64.js"></script>
-	<script src="${staticPath}/scripts/frame/bootstrap-table/dist/extends/tableExport/tableExport.js"></script>
-	
-	
-	<script src="${staticPath}/scripts/frame/bootstrap-table/dist/bootstrap-table-locale-all.js"></script>-->
-	<script src="${staticPath}/scripts/frame/bootstrap-table/dist/bootstrap-table.js"></script>
-	<script src="${staticPath}/scripts/frame/bootstrap-datetimepicker/js/bootstrap-datetimepicker.min.js"></script>
-	<script src="${staticPath}/scripts/frame/bootstrap-datetimepicker/js/locales/bootstrap-datetimepicker.zh-CN.js"></script>
-
-	<script src="${staticPath}/scripts/layer.3.0.1/layer.js"></script>
-	<script src="${staticPath}/scripts/jquery-jtemplates.js"></script>
-	<script src="${staticPath}/scripts/ztree.3.5.26/jquery.ztree.core.js"></script>
-
-	<script type="text/javascript">
-			
-			jQuery(".picScroll-left").slide({titCell:".hd ul",mainCell:".bd ul",autoPage:true,effect:"left",autoPlay:true,vis:1,trigger:"click"});
-	</script>
-	
-<head/>
-<script>
-	
-	var basePath = "<%=basePath%>";
-</script>
-
+<meta name="menu" content="userAuth" />
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<meta http-equiv="X-UA-Compatible" content="IE=edge,Chrome=1" />
+<title>客户资料录入</title>
+<script src="${staticPath}/customers/addCustomer.js"></script>
+<style type="text/css">
+</style>
 </head>
 <body>
-		
+	<div id="curLocation">
+		<p>当前位置：认证管理 > 认证审核</p>
+		<hr />
+	</div>
+	<div id="pageContent">
+		<div>
+			<form class="bs-example bs-example-form" role="form">
+				<div class="input-group col-md-9">
+					<span class="input-group-addon" >姓 &nbsp; &nbsp; &nbsp; &nbsp;名：</span> <input type="text"
+						style="width:200px;" class="form-control" placeholder="姓名" id="companyName"/>
+				    
+					<span class="input-group-addon">身份证号：</span> <input type="text"
+						style="width:300px;" class="form-control" placeholder="身份证号" id="companyName"/>		
+				</div>
+				<br>
+				<div class="input-group col-md-9">
+					<span class="input-group-addon">手机号码：</span> <input type="text"
+						style="width:200px;" class="form-control" placeholder="手机号码" id="companyName"/>
+					<span class="input-group-addon">家庭住址：</span> <input type="text"
+						style="width:300px;" class="form-control" placeholder="家庭住址" id="companyName"/>		
+				</div>
+				<br>
+				<div class="input-group col-md-9">
+					<span class="input-group-addon">微信号码：</span> <input type="text"
+						style="width:200px;" class="form-control" placeholder="微信号码" id="companyName"/>
+					<span class="input-group-addon">电子邮箱：</span> <input type="text"
+						style="width:300px;" class="form-control" placeholder="电子邮箱" id="companyName"/>		
+				</div>
+				<br>
+				<div class="input-group col-md-9">
+					<span class="input-group-addon">客户来源：</span> <input type="text"
+						style="width:200px;" class="form-control" placeholder="客户来源" id="companyName"/>
+				</div>
+				<br>
+				<!--div class="input-group col-md-9">
+					<span class="input-group-addon">审核时间：</span> <input size="16"
+						style="border: 1px solid #ccc; font-size: 14px; line-height: 2px; padding: 6px 12px; height: 34px; width: 200px;"
+						type="text" id="datetimeStart" readonly class="form_datetime " />
+					&nbsp;至&nbsp; <input size="16"
+						style="border: 1px solid #ccc; font-size: 14px; line-height: 2px; padding: 6px 12px; height: 34px; width: 200px;"
+						type="text" id="datetimeEnd" readonly class="form_datetime" />
+					<script type="text/javascript">
+						$("#datetimeStart").datetimepicker({
+							format : 'yyyy-mm-dd',
+							minView : 'month',
+							language : 'zh-CN',
+							autoclose : true,
+						//startDate:new Date()
+						}).on(
+								"click",
+								function() {
+									$("#datetimeStart").datetimepicker(
+											"setEndDate",
+											$("#datetimeEnd").val())
+								});
+						$("#datetimeEnd").datetimepicker({
+							format : 'yyyy-mm-dd',
+							minView : 'month',
+							language : 'zh-CN',
+							autoclose : true,
+						//startDate:new Date()
+						}).on(
+								"click",
+								function() {
+									$("#datetimeEnd").datetimepicker(
+											"setStartDate",
+											$("#datetimeStart").val())
+								});
+					</script>
+				</div-->
+				<br>
+				<div class="input-group">
+
+					<button type="button" id="queryBtn" class="btn btn-primary"
+						style="width: 80px;">查询</button>
+				</div>
+			</form>
+		</div>
+
+		<div id="reportTableDiv" style="margin-bottom: 40px;">
+
+
+			<table id="reportTable">
+			</table>
+		</div>
+
+		<!--  -->
+
+	</div>
+
 </body>
+
 </html>
