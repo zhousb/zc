@@ -2,7 +2,7 @@ package com.zc.controller.model;
 
 import java.io.Serializable;
 
-import com.zc.common.exception.SystemException;
+import com.zc.common.exception.ZCException;
 
 
 /**
@@ -49,10 +49,10 @@ public class BaseWebReq implements Serializable{
 			Integer.parseInt(limit);
 		}
 		catch(NumberFormatException e){
-			throw  new SystemException("偏移量="+offset+"和页面大小="+limit+"不合法");
+			throw  new ZCException("偏移量="+offset+"和页面大小="+limit+"不合法");
 		}
 		if(Integer.parseInt(offset)%Integer.parseInt(limit) != 0 || Integer.parseInt(offset) <0 || Integer.parseInt(limit)<0){
-			throw  new SystemException("偏移量="+offset+"和页面大小="+limit+"不合法");
+			throw  new ZCException("偏移量="+offset+"和页面大小="+limit+"不合法");
 		}
 		int pageNum = Integer.parseInt(offset)/Integer.parseInt(limit)+1;
 		return pageNum;

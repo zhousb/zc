@@ -88,8 +88,11 @@ AddCustomer.prototype = {
 				data : params,
 				message : "请稍后...",
 				success : function(data) {
-					if(data.statusCode == '1'){
-						bootbox.alert({title:"提示", message:"提交成功！"});
+					if(data.statusCode == '200'){
+						bootbox.alert({title:"提示", message:data.statusInfo});
+					}
+					else if(data.statusCode == '201'){
+						bootbox.alert({title:"提示", message:data.statusInfo});
 					}
 					else{					
 						bootbox.alert({title:"提示", message:"网络故障，请稍后重试！"});

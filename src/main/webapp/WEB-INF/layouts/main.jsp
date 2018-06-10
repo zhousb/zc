@@ -26,7 +26,7 @@
 	<link rel="stylesheet" href="${staticPath}/css/index.css" rel="stylesheet" type="text/css">
 	<link rel="stylesheet" href="${staticPath}/css/iconfont.css" rel="stylesheet" type="text/css"> 
 	 -->
-	<link rel="stylesheet" href="${staticPath}/css/boostrap/style.css" type="text/css" />
+	<!-- link rel="stylesheet" href="${staticPath}/css/boostrap/style.css" type="text/css" /-->
 	<link rel="stylesheet" href="${staticPath}/css/boostrap/bootstrap.css" type="text/css" />
 	<link rel="stylesheet" href="${staticPath}/css/font-awesome/css/font-awesome.css" type="text/css" />
 	<link rel="stylesheet" href="${staticPath}/scripts/frame/ajaxhelper/css/jquery.pagcontroller.css"/>

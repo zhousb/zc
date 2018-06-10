@@ -16,7 +16,7 @@
 	<mvc:annotation-driven />
     
     <!-- Controller的包，使容器启动的时候可以找的并实例化Controller -->
-    <context:component-scan base-package="com.zc.controller"/>
+    <context:component-scan base-package="com.zc"/>
     
     <!-- 对静态资源文件的访问 -->
 	<mvc:default-servlet-handler />
@@ -89,4 +89,7 @@
 	
 	<!--统一异常处理模块  -->
 	<bean class="com.zc.system.handler.ZCExceptionHandler" id="exceptionHandler"></bean>
+	
+	<import resource="spring-datasource.xml" />
+	
 </beans>

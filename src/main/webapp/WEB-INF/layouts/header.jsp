@@ -93,7 +93,7 @@ header .navbar-left .dropdown-menu li a p{
       			admin
       			</a>
       		</li>
-      		<li><a href="${basePath}/user/logout"><span class="glyphicon glyphicon-log-in"></span>&nbsp;
+      		<li><a href="${basePath}/user/logout.do"><span class="glyphicon glyphicon-log-in"></span>&nbsp;
       			退出
       			</a>
       		</li>
@@ -128,7 +128,7 @@ ajaxController.ajax({
 	showWait : false,
 	message : "请稍后...",
 	success : function(data) {
-		if(data.statusCode == '1'){
+		if(data.statusCode == '200'){
 			 $("#headerMenus").setTemplateElement("hdtmpl");
    			 // 给模板加载数据
   			 $("#headerMenus").processTemplate(data.data);

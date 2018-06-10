@@ -45,7 +45,7 @@ ajaxController.ajax({
 	showWait : false,
 	message : "请稍后...",
 	success : function(data) {
-		if(data.statusCode == '1'){
+		if(data.statusCode == '200'){
 			 $("#leftMenus").setTemplateElement("lefttmpl");
    			 // 给模板加载数据
   			 $("#leftMenus").processTemplate(data.data);

@@ -14,6 +14,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import com.google.gson.Gson;
+import com.zc.common.web.model.RespCode;
 import com.zc.common.web.model.ResponseData;
 import com.zc.controller.menumgr.model.MenuVO;
 
@@ -326,7 +327,7 @@ public class MenuMgrController {
 	@RequestMapping(value = "loadHeaderMenus")
 	@ResponseBody
 	public ResponseData<List<MenuVO>> loadHeaderMenu(){
-		ResponseData<List<MenuVO>> resp = new ResponseData<List<MenuVO>>(ResponseData.AJAX_STATUS_SUCCESS,"获取头部菜单成功");
+		ResponseData<List<MenuVO>> resp = new ResponseData<List<MenuVO>>(RespCode.CommonRespCode.SUCCESS.getCode(),"获取头部菜单成功");
 		resp.setData(parseMenu(menus));
 		Gson gson = new Gson();
 		LOG.info("获取头部菜单返回：{}",gson.toJson(resp));
@@ -386,7 +387,7 @@ public class MenuMgrController {
 	@ResponseBody
 	public ResponseData<MenuVO> loadLeftMenu(String menuIndex){
 		
-		ResponseData<MenuVO> resp = new ResponseData<MenuVO>(ResponseData.AJAX_STATUS_SUCCESS,"获取头部菜单成功");
+		ResponseData<MenuVO> resp = new ResponseData<MenuVO>(RespCode.CommonRespCode.SUCCESS.getCode(),"获取头部菜单成功");
 		menuIndex = StringUtils.isEmpty(menuIndex) ? "none" : menuIndex;
 		
 		List<MenuVO> menusTree = parseMenu(menus);

@@ -2,18 +2,23 @@ package com.zc.common.web.model;
 
 import java.io.Serializable;
 
-public class ResponseData<T> extends BaseResponse implements Serializable {
+public class ResponseData<T>  implements Serializable {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -921554430050848086L;
-	public static final String AJAX_STATUS_SUCCESS = "1";
-	public static final String AJAX_STATUS_FAILURE = "0";
+
 	private String statusCode;
 	private String statusInfo;
 	private T data;
 
+	
+	public ResponseData(){
+		this.statusCode = RespCode.CommonRespCode.SUCCESS.getCode();
+		this.statusInfo= RespCode.CommonRespCode.SUCCESS.getMsg();
+	}
+	
 	public ResponseData(String statusCode, String statusInfo) {
 		this.statusCode = statusCode;
 		this.statusInfo = statusInfo;

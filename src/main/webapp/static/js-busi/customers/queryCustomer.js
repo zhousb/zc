@@ -61,7 +61,7 @@ QueryCustomer.prototype = {
 			pageList: [20, 50, 100],
 			showColumns: true,
 			showRefresh: true,
-			search: true,
+			//search: true,
 			strictSearch:true,
 			contentType:'application/x-www-form-urlencoded',
 			paginationPreText:'上一页',
@@ -69,37 +69,18 @@ QueryCustomer.prototype = {
 			clickToSelect: true,
 			columns: [
 			          {field:"id",title:"编号",align:"center",valign:"middle",sortable:"true"},
-			          {field:"userName",title:"姓名",align:"center",valign:"middle",sortable:"true"},
-			          {field:"identityCard",title:"身份证号",align:"center",valign:"middle",sortable:"true"},
+			          {field:"username",title:"姓名",align:"center",valign:"middle",sortable:"true"},
+			          {field:"identitycard",title:"身份证号",align:"center",valign:"middle",sortable:"true"},
 			          {field:"sex",title:"性别",align:"center",valign:"middle",sortable:"true"},
 			          {field:"marriage",title:"婚姻状况",align:"center",valign:"middle",sortable:"true"},
 			          {field:"phone",title:"手机号码",align:"center",valign:"middle",sortable:"true"},
 			          {field:"profession",title:"职业",align:"center",valign:"middle",sortable:"true"},
-			          {field:"annualIncome",title:"年收入(万)",align:"center",valign:"middle",sortable:"true"},
-			          {field:"email",title:"状态/操作",align:"left",valign:"middle",sortable:"true",
+			          {field:"annualincome",title:"年收入(万)",align:"center",valign:"middle",sortable:"true"},
+			          {field:"id",title:"操作",align:"center",valign:"middle",sortable:"true",
 			        	  //数据返回处理
 			        	  formatter:function(value,row,index){
-			        		  if(value == '1'){
-			        			  //审核通过
-			        			  var e = '<i class="glyphicon glyphicon-eye-open"/><a href="javascript:userAuthDetailView('+row.id+');" style="color:green">审核通过</a>';  
-			                      return e;
-			        		  }
-			        		  else if(value == '2'){
-			        			  //审核未通过
-			        			  var e = '<i class="glyphicon glyphicon-eye-open"/><a href="javascript:userAuthDetailView('+row.id+');" style="color:red">审核未通过</a>';  
-			                      return e;
-			        		  }
-			        		  else if(value == '3'){
-			        			  //待审核
-			        			  var e = '<i class="glyphicon glyphicon-eye-open"/><a href="javascript:userAuthDetailView('+row.id+');" style="color:red">待审核</a>';  
-			                      return e;
-			        		  }
-			        		  else{
-			        			  
-			        			  var e = '<i class="glyphicon glyphicon-eye-open"/><a href="javascript:userAuthDetailView('+row.id+');" style="color:red">待审核</a>';  
-			                      return e;
-			        		  }
-			                     
+			        			 var e = '<a href="javascript:userAuthDetailView('+row.id+');" style="color:green">查看</a>|<a href="javascript:userAuthDetailView('+row.id+');" style="color:green">编辑</a>';  
+			                     return e;   
 			               } 
 			          
 			          }
@@ -110,7 +91,7 @@ QueryCustomer.prototype = {
             onLoadError:function(status){
             	messageController.hideWait();
             	$('#reportTable').bootstrapTable('removeAll');
-            	bootbox.alert({title:"提示", message:"网络故障，请稍后再试！"});
+            	//bootbox.alert({title:"提示", message:"网络故障，稍后再试！"});
             },
             onLoadSuccess : function(data){
             	messageController.hideWait();
@@ -118,7 +99,7 @@ QueryCustomer.prototype = {
             },
             responseHandler:function(res){
             	//数据处理
-            	if(res.statusCode != 1){
+            	if(res.statusCode != 200){
             		//响应失败
             		bootbox.alert({title:"提示", message:"网络故障，请稍后再试！"});
             		return {};

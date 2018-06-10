@@ -6,7 +6,7 @@ import java.io.Serializable;
  * @author zhoushanbin
  * @date 2018年6月2日
  */
-public class CustomerReqVO implements Serializable{
+public class AddCustomerReqVO implements Serializable{
 
 	/**
 	 * 
