@@ -30,10 +30,10 @@
 			<form class="bs-example bs-example-form" role="form" id = "customerAddForm">
 				<div class="input-group col-md-9">
 					<span class="input-group-addon" style="width:100px;">姓名：</span> <input type="text"
-						style="width:250px;" class="form-control" placeholder="姓名" name="userName" id="userName"/>
+						style="width:250px;" class="form-control" placeholder="姓名（必填）" name="userName" id="userName"/>
 				    
 					<span class="input-group-addon"style="width:100px;">身份证号：</span> <input type="text"
-						style="width:250px;" class="form-control" placeholder="身份证号" id="identityCard"/>		
+						style="width:250px;" class="form-control" placeholder="身份证号（必填）" id="identityCard"/>		
 				</div>
 				<br>
 				<div class="input-group col-md-9">
@@ -53,7 +53,7 @@
 				<br>
 				<div class="input-group col-md-9">
 					<span class="input-group-addon"style="width:100px;">手机号码：</span> <input type="text"
-						style="width:250px;" class="form-control" placeholder="手机号码" id="phone"/>
+						style="width:250px;" class="form-control" placeholder="手机号码（必填）" id="phone"/>
 					<span class="input-group-addon"style="width:100px;">家庭住址：</span> <input type="text"
 						style="width:250px;" class="form-control" placeholder="家庭住址" id="address"/>		
 				</div>

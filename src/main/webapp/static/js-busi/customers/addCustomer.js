@@ -70,6 +70,11 @@ AddCustomer.prototype = {
 			    return;
 			}
 			else{
+				re = /^1\d{10}$/;
+				if(!re.test($("#phone").val())){
+					bootbox.alert({title:"提示", message:"请输入以1开头的11位手机号！"});
+					return;
+				}
 				params.phone=$("#phone").val();
 			}
 			params.address=$("#address").val();
