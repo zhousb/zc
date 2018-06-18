@@ -46,13 +46,13 @@ public class CustomerDaoImpl implements ICustomerDao{
 			TCustomerCriteria example = new TCustomerCriteria();
 			TCustomerCriteria.Criteria criteria = example.createCriteria();
 			if(!StringUtils.isEmpty(userName)){
-				criteria.andUsernameEqualTo(userName);
+				criteria.andUsernameEqualTo(userName.trim());
 			}
 			if(!StringUtils.isEmpty(idCard)){
-				criteria.andIdentitycardEqualTo(idCard);
+				criteria.andIdentitycardEqualTo(idCard.trim());
 			}
 			if(!StringUtils.isEmpty(phone)){
-				criteria.andPhoneEqualTo(phone);
+				criteria.andPhoneEqualTo(phone.trim());
 			}
 			if(pageSize != 0){
 				example.setLimitStart(offset);
@@ -68,11 +68,45 @@ public class CustomerDaoImpl implements ICustomerDao{
 		
 	}
 
+	
+	
+	
 	@Override
 	public long count() throws ZCException{
 		try{
 			TCustomerCriteria example = new TCustomerCriteria();
 			return MapperFactory.getTCustomerMapper().countByExample(example);
+		}
+		catch (Exception e) {
+			throw new ZCException(e);
+		}
+	}
+
+	@Override
+	public TCustomer queryTCustomerById(long id) throws ZCException {
+		try{
+			TCustomerCriteria example = new TCustomerCriteria();
+			example.createCriteria().andIdEqualTo(id);
+			List<TCustomer> list = MapperFactory.getTCustomerMapper().selectByExample(example);
+			return CollectionUtils.isEmpty(list)?null:list.get(0);
+		}
+		catch (Exception e) {
+			throw new ZCException(e);
+		}
+	}
+
+	@Override
+	public void deleteTCustomerById(long id) throws ZCException {
+		TCustomerCriteria example = new TCustomerCriteria();
+		example.createCriteria().andIdEqualTo(id);
+		MapperFactory.getTCustomerMapper().deleteByExample(example);
+	}
+
+	@Override
+	public void updateCustomerById(TCustomer customer) throws ZCException {
+		
+		try{
+			MapperFactory.getTCustomerMapper().updateByPrimaryKeySelective(customer);
 		}
 		catch (Exception e) {
 			throw new ZCException(e);

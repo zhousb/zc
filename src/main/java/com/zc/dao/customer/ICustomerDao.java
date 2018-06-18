@@ -9,5 +9,12 @@ public interface ICustomerDao {
 	void addCustomer(TCustomer record) throws ZCException;
 	TCustomer queryTCustomerByPhone(String phone) throws ZCException;
 	List<TCustomer> queryCustomers(String userName,String idCard,String phone,Integer offset,int pageSize) throws ZCException;
-	long count() throws ZCException;;
+	long count() throws ZCException;
+	
+	TCustomer queryTCustomerById(long id) throws ZCException;
+	
+	void deleteTCustomerById(long id) throws ZCException;
+	
+	void updateCustomerById(TCustomer customer) throws ZCException;
+	
 }

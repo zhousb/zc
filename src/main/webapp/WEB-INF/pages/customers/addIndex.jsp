@@ -68,6 +68,7 @@
 				<div class="input-group col-md-9">
 					<span class="input-group-addon"style="width:100px;">职业：</span> 
 								<select id="profession" class="form-control" style="width:250px;">
+									<option value="9">其他</option>
 									<option value="1">国家机关、党群组织、企业、事业单位负责人</option>
 									<option value="2">专业技术人员</option>
 									<option value="3">办事人员和有关人员</option>
@@ -76,10 +77,10 @@
 									<option value="6">生产、运输设备操作人员及有关人员</option>
 									<option value="7">军人</option>
 									<option value="8">无业</option>
-									<option value="9">其他</option>
 								</select>
 					<span class="input-group-addon"style="width:100px;">年收入：</span> 
 								<select id="annualIncome" class="form-control" style="width:250px;">
+									<option value="7">未知</option>
 									<option value="1">10万以下</option>
 									<option value="2">10万-20万</option>
 									<option value="3">20万-40万</option>
@@ -94,9 +95,9 @@
 						style="width:250px;" class="form-control" placeholder="单位" id="company"/>
 					<span class="input-group-addon"style="width:100px;">客户来源：</span> 
 								<select id="customerSource" class="form-control" style="width:250px;">
+									<option value="3">其他</option>
 									<option value="1">官网</option>
 									<option value="2">推荐</option>
-									<option value="3">其他</option>
 								</select>
 					
 				</div>

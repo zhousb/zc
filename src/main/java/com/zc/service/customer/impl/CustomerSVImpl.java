@@ -52,4 +52,39 @@ public class CustomerSVImpl implements ICustomerSV{
 		}
 	}
 
+	@Override
+	public TCustomer queryTCustomerById(long id) throws ZCException {
+		try{
+			return customerDao.queryTCustomerById(id);
+		}
+		catch(Exception e){
+			throw new ZCException(e);
+		}
+	}
+
+	@Override
+	public void deleteTCustomerById(long id) throws ZCException {
+		try{
+			customerDao.deleteTCustomerById(id);
+		}
+		catch(Exception e){
+			throw new ZCException(e);
+		}
+		
+	}
+
+	@Override
+	public void updateCustomerById(TCustomer customer) throws ZCException {
+		try{
+			customerDao.updateCustomerById(customer);
+		}
+		catch(Exception e){
+			throw new ZCException(e);
+		}
+		
+	}
+
+	
+	
+	
 }

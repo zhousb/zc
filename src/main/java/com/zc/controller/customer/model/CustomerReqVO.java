@@ -6,12 +6,14 @@ import java.io.Serializable;
  * @author zhoushanbin
  * @date 2018年6月2日
  */
-public class AddCustomerReqVO implements Serializable{
+public class CustomerReqVO implements Serializable{
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = 1007989910126687118L;
+	
+	private long id;
 	
 	private String userName;
 	private String identityCard;
@@ -103,6 +105,12 @@ public class AddCustomerReqVO implements Serializable{
 	}
 	public void setDesc(String desc) {
 		this.desc = desc;
+	}
+	public long getId() {
+		return id;
+	}
+	public void setId(long id) {
+		this.id = id;
 	}
 	
 
